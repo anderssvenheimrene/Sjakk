@@ -14,7 +14,17 @@ public class Coord {
     public Coord(int x, int y){
         this.x = x;
         this.y = y;
-        //
+        coordinate = ((char)(y+97)+ "" + (x+1));
+    }
+    public String toString(){
+        return("(" + this.x + "," + this.y);
+    }
+
+    public boolean equals(Object o){
+        if(!(o instanceof Coord))
+            return false;
+        Coord c = (Coord)o;
+        return(c.x == this.x && c.y == this.y);
     }
 }
 

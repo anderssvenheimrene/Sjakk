@@ -4,31 +4,41 @@ public class Piece {
 
     public PieceType pieceType; // create the public enum variable pieceType
     public Coord pos;
-    public PieceColor pieceColor;
+    final PieceColor pieceColor;
 
     public Piece(PieceType pieceType, PieceColor pieceColor, Coord pos) {  //Constructor taking in a Coord
         this.pieceType = pieceType;
         this.pos = pos;
         this.pieceColor = pieceColor;
     }
-
     public Piece(PieceType pieceType, PieceColor pieceColor, int xPos, int yPos) {  //Constructor taking in y, x
         this.pieceType = pieceType;
+        this.pos = new Coord(xPos,yPos);
+        /**
         char[]  newPosString = new char[2];
         newPosString[0] = (char)yPos; // y position = letter
         newPosString[1] = (char)xPos; // x position = number
         pos = new Coord(String.valueOf(newPosString));
+         */
         this.pieceColor = pieceColor;
     }
+    public Piece(int xPos, int yPos) {
 
-    public Piece(int xPos, int yPos) {//constructor for empty space.
-        // Creates an instance with positions and nothing else
         char[]  newPosString = new char[2];
         newPosString[0] = (char)yPos; // y position = letter
         newPosString[1] = (char)xPos; // x position = number
-        pos = new Coord(String.valueOf(newPosString));
+        pos = new Coord(xPos,yPos);
         pieceType = PieceType.X;
         pieceColor = PieceColor.NONE;
+    }
+    public Piece(){
+        pieceType = PieceType.X;
+        pieceColor = PieceColor.NONE;
+    }
+
+    void move(Board board, Coord c){
+        this.pos = c;
+        board.board[c.x][c.y] = this;
     }
 
     public boolean isValidMove(Board board, Coord coord){
@@ -44,12 +54,14 @@ public class Piece {
         }
     }
 
-//    public boolean movePiece(int xMove, int yMove){
-//        if(isValidMove(xMove,yMove)){
-//
-//        }
-//    }
-//
+    public PieceColor getOppositeColor(){
+        if(this.pieceColor ==PieceColor.BLACK)
+            return pieceColor.WHITE;
+        else if (this.pieceColor== PieceColor.WHITE)
+            return pieceColor.BLACK;
+        else return null;
+    }
+
     public boolean isValidPawnMove(Board board, Coord desiredCoordinate){
         //if the move is 1 step ahead, or if it is 2 steps ahead and we havent moved yet, or if it is a capture and diagonal
         switch(this.pieceColor) {
@@ -226,37 +238,19 @@ public class Piece {
         return (isValidStraightMove(board,desiredCoordinate) && this.pieceColor != board.board[desiredCoordinate.y][desiredCoordinate.x].pieceColor);
     }
 
-    public boolean isValidQueenMove(Board board, Coord desiredCoordinate){
+    boolean isValidQueenMove(Board board, Coord desiredCoordinate){
         return ((isValidStraightMove(board, desiredCoordinate) || isValidDiagonalMove(board, desiredCoordinate)) // valid straight or diagonal move
                 && this.pieceColor != board.board[desiredCoordinate.y][desiredCoordinate.x].pieceColor); // also not a friendly piece in desired location
     }
 
-    public boolean isValidKingMove(Board board, Coord desiredCoordinate){
+    boolean isValidKingMove(Board board, Coord desiredCoordinate){
         int xDiff = Math.abs(this.pos.x - desiredCoordinate.x);
         int yDiff = Math.abs(this.pos.y - desiredCoordinate.y);
         return (xDiff < 2 && yDiff < 2 && this.pieceColor != board.board[desiredCoordinate.y][desiredCoordinate.x].pieceColor);
     }
 
-    public Coord[] canBlock(Board board, Coord kingPos){
-        Coord returnCoord[];
-        switch(this.pieceType){
-            case ROOK:
-                int xDiff = Math.abs(this.pos.x - kingPos.x);
-                int yDiff = Math.abs(this.pos.y - kingPos.y);
-                if(xDiff == 0){
-                    returnCoord = new Coord[yDiff];
-                    for(int i = Math.min(this.pos.y, kingPos.y)+1; i< xDiff; i++){
-                        
-                    }
-
-                }
-            case BISHOP:
-
-            case QUEEN:
-
-            default:
-                return null;
-        }
+    public String toString(){
+        return("" + this.pieceColor + " " + this.pieceType + " " +this.pos);
     }
 //end of class
 }

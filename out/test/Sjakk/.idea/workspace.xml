@@ -13,7 +13,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/Sjakk/com/company/PieceColor.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sjakk/com/company/PieceType.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Coord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Piece.java" afterDir="false" />
     </list>
@@ -68,7 +67,7 @@
     <session id="2057104232">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
@@ -81,28 +80,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="15" />
-          <entry key="java" value="13258" />
+          <entry key="java" value="7341" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="13258" />
-          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="JAVA" value="7341" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="10" />
+          <entry key="class" value="3" />
           <entry key="groovy" value="1" />
-          <entry key="java" value="13" />
+          <entry key="java" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="10" />
+          <entry key="CLASS" value="3" />
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="13" />
+          <entry key="JAVA" value="7" />
         </counts>
       </usages-collector>
     </session>
@@ -112,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="126">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -121,30 +118,42 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
+            <state relative-caret-position="56">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#Board#0;class#Board#0" />
                 <element signature="method#takePlayerInput#0;class#Board#0" />
+                <element signature="method#PrintBoard#0;class#Board#0" />
                 <element signature="method#testMoves#0;class#Board#0" />
                 <element signature="method#getAllSameColorPieces#0;class#Board#0" />
+                <element signature="method#checkIfChecked#0;class#Board#0" />
                 <element signature="method#checkForMate#0;class#Board#0" />
                 <element signature="method#getInterSectionSquares#0;class#Board#0" />
                 <element signature="method#getStraightIntersectionSquares#0;class#Board#0" />
                 <element signature="method#getDiagonalIntersectionSquares#0;class#Board#0" />
-                <element signature="method#getKing#0;class#Board#0" />
-                <element signature="method#changePlayer#0;class#Board#0" />
-                <element signature="method#getOppositeColor#0;class#Board#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/BoardTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Coord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="266">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -152,50 +161,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Piece.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="158" column="5" lean-forward="true" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
+            <state relative-caret-position="350">
+              <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
               <folding>
                 <element signature="method#Piece#0;class#Piece#0" />
                 <element signature="method#Piece#1;class#Piece#0" />
-                <element signature="method#Piece#2;class#Piece#0" />
-                <element signature="method#Piece#3;class#Piece#0" />
-                <element signature="method#isValidMove#0;class#Piece#0" />
+                <element signature="e#843#873#0" />
                 <element signature="method#getOppositeColor#0;class#Piece#0" />
                 <element signature="method#isValidPawnMove#0;class#Piece#0" />
+                <element signature="method#isValidDiagonalMove#0;class#Piece#0" />
                 <element signature="method#isValidBishopMove#0;class#Piece#0" />
                 <element signature="method#isValidKnightMove#0;class#Piece#0" />
                 <element signature="method#isValidStraightMove#0;class#Piece#0" />
                 <element signature="method#isValidRookMove#0;class#Piece#0" />
                 <element signature="method#isValidQueenMove#0;class#Piece#0" />
                 <element signature="method#isValidKingMove#0;class#Piece#0" />
-                <element signature="e#11839#11840#0" expanded="true" />
-                <element signature="e#11922#11923#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Coord.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-              <folding>
-                <element signature="e#575#576#0" expanded="true" />
-                <element signature="e#608#609#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/BoardTest.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/PieceColor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="70">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/PieceType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -219,7 +218,6 @@
       <find>newX</find>
       <find>this</find>
       <find>k</find>
-      <find>new</find>
     </findStrings>
     <replaceStrings>
       <replace>mineFunksjoner</replace>
@@ -245,13 +243,12 @@
         <option value="$PROJECT_DIR$/src/com/company/Funksjoner.java" />
         <option value="$PROJECT_DIR$/src/com/company/PieceColor.java" />
         <option value="$PROJECT_DIR$/src/com/company/PieceType.java" />
-        <option value="$PROJECT_DIR$/src/com/company/BoardTest.groovy" />
-        <option value="$PROJECT_DIR$/src/com/company/CoordTest.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Coord.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Board.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/BoardTest.groovy" />
         <option value="$PROJECT_DIR$/src/com/company/Piece.java" />
         <option value="$PROJECT_DIR$/src/com/company/BoardTest.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Board.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Coord.java" />
       </list>
     </option>
   </component>
@@ -295,6 +292,12 @@
             </path>
             <path>
               <item name="SjakkProsjekt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SjakkProsjekt" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SjakkProsjekt" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -307,7 +310,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545654923687" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545420247223" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -351,20 +354,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sjakk" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.BoardTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BoardTest.getInterSectionSquares" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sjakk" />
       <extension name="coverage">
@@ -381,34 +370,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CoordTest.coordTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sjakk" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company" />
-      <option name="MAIN_CLASS_NAME" value="com.company.CoordTest" />
-      <option name="METHOD_NAME" value="coordTests" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.BoardTest.getInterSectionSquares" />
-      <item itemvalue="JUnit.CoordTest.coordTests" />
-      <item itemvalue="JUnit.BoardTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.BoardTest" />
         <item itemvalue="JUnit.BoardTest.getInterSectionSquares" />
-        <item itemvalue="JUnit.CoordTest.coordTests" />
       </list>
     </recent_temporary>
   </component>
@@ -425,38 +394,6 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="BoardTest_getInterSectionSquares - 2018.12.22 at 19h 01m 28s.xml">
-      <configuration name="BoardTest.getInterSectionSquares" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_getInterSectionSquares - 2018.12.22 at 19h 02m 10s.xml">
-      <configuration name="BoardTest.getInterSectionSquares" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_getInterSectionSquares - 2018.12.22 at 19h 03m 02s.xml">
-      <configuration name="BoardTest.getInterSectionSquares" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_getInterSectionSquares - 2018.12.22 at 19h 05m 06s.xml">
-      <configuration name="BoardTest.getInterSectionSquares" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_getInterSectionSquares - 2018.12.22 at 19h 42m 44s.xml">
-      <configuration name="BoardTest.getInterSectionSquares" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_getInterSectionSquares - 2018.12.23 at 18h 07m 30s.xml">
-      <configuration name="BoardTest.getInterSectionSquares" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_getInterSectionSquares - 2018.12.24 at 12h 42m 31s.xml">
-      <configuration name="BoardTest.getInterSectionSquares" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest_getInterSectionSquares - 2018.12.24 at 13h 27m 41s.xml">
-      <configuration name="BoardTest.getInterSectionSquares" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest - 2018.12.24 at 13h 27m 51s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BoardTest - 2018.12.24 at 13h 31m 42s.xml">
-      <configuration name="BoardTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -470,24 +407,24 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48045602" visible="true" weight="0.19606802" />
-      <window_info id="Structure" order="1" sideWeight="0.51954395" side_tool="true" visible="true" weight="0.19606802" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4811166" visible="true" weight="0.19606802" />
+      <window_info id="Structure" order="1" sideWeight="0.5188834" side_tool="true" visible="true" weight="0.19606802" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32896176" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43715847" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3978142" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32942554" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43809524" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39863947" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32942554" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.33442622" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.33442622" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.16830601" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.16870749" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -501,44 +438,6 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/Board.java</url>
-          <line>356</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/Board.java</url>
-          <line>320</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="JUnit">
-        <watch expression="maxX" language="JAVA" />
-        <watch expression="minX" language="JAVA" />
-      </configuration>
-    </watches-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="watch">
-      <expression>
-        <expression-string>minX</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>maxX</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Functions.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Functions" />
@@ -547,6 +446,61 @@
     <entry file="file://$PROJECT_DIR$/out/production/Sjakk/com/company/Coord.class" />
     <entry file="file://$PROJECT_DIR$/out/production/Sjakk/com/company/PieceColor.class" />
     <entry file="file://$PROJECT_DIR$/out/production/Sjakk/com/company/PieceType.class" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Board#0;class#Board#0" />
+            <element signature="method#takePlayerInput#0;class#Board#0" />
+            <element signature="method#PrintBoard#0;class#Board#0" />
+            <element signature="method#testMoves#0;class#Board#0" />
+            <element signature="method#getAllSameColorPieces#0;class#Board#0" />
+            <element signature="method#checkIfChecked#0;class#Board#0" />
+            <element signature="method#checkForMate#0;class#Board#0" />
+            <element signature="method#getInterSectionSquares#0;class#Board#0" />
+            <element signature="method#getStraightIntersectionSquares#0;class#Board#0" />
+            <element signature="method#getDiagonalIntersectionSquares#0;class#Board#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Coord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Piece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="method#Piece#0;class#Piece#0" />
+            <element signature="method#Piece#1;class#Piece#0" />
+            <element signature="e#843#873#0" />
+            <element signature="method#getOppositeColor#0;class#Piece#0" />
+            <element signature="method#isValidPawnMove#0;class#Piece#0" />
+            <element signature="method#isValidDiagonalMove#0;class#Piece#0" />
+            <element signature="method#isValidBishopMove#0;class#Piece#0" />
+            <element signature="method#isValidKnightMove#0;class#Piece#0" />
+            <element signature="method#isValidStraightMove#0;class#Piece#0" />
+            <element signature="method#isValidRookMove#0;class#Piece#0" />
+            <element signature="method#isValidQueenMove#0;class#Piece#0" />
+            <element signature="method#isValidKingMove#0;class#Piece#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/PieceColor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -561,174 +515,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/CoordTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#217#218#0" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="1345" column="26" selection-start-line="1345" selection-start-column="26" selection-end-line="1345" selection-end-column="26" />
-          <folding>
-            <element signature="e#52232#52233#0" expanded="true" />
-            <element signature="e#52271#52272#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="1652" selection-start-line="1652" selection-end-line="1652" />
-          <folding>
-            <element signature="e#62860#62861#0" expanded="true" />
-            <element signature="e#62916#62917#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/jre/lib/rt.jar!/sun/misc/Launcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="179" selection-start-line="179" selection-end-line="179" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="356" selection-start-line="356" selection-end-line="356" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/EachTestNotifier.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="203" selection-start-line="203" selection-end-line="203" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/test/Sjakk/com/company/Piece.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="e#0#9600#0" expanded="true" />
-            <element signature="method#Piece#0;class#Piece#0" />
-            <element signature="method#Piece#1;class#Piece#0" />
-            <element signature="method#Piece#2;class#Piece#0" />
-            <element signature="method#Piece#3;class#Piece#0" />
-            <element signature="method#isValidMove#0;class#Piece#0" />
-            <element signature="method#getOppositeColor#0;class#Piece#0" />
-            <element signature="method#isValidPawnMove#0;class#Piece#0" />
-            <element signature="method#isValidDiagonalMove#0;class#Piece#0" />
-            <element signature="method#isValidBishopMove#0;class#Piece#0" />
-            <element signature="method#isValidKnightMove#0;class#Piece#0" />
-            <element signature="method#isValidStraightMove#0;class#Piece#0" />
-            <element signature="method#isValidRookMove#0;class#Piece#0" />
-            <element signature="method#isValidQueenMove#0;class#Piece#0" />
-            <element signature="method#isValidKingMove#0;class#Piece#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Piece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="158" column="5" lean-forward="true" selection-start-line="158" selection-start-column="5" selection-end-line="158" selection-end-column="5" />
-          <folding>
-            <element signature="method#Piece#0;class#Piece#0" />
-            <element signature="method#Piece#1;class#Piece#0" />
-            <element signature="method#Piece#2;class#Piece#0" />
-            <element signature="method#Piece#3;class#Piece#0" />
-            <element signature="method#isValidMove#0;class#Piece#0" />
-            <element signature="method#getOppositeColor#0;class#Piece#0" />
-            <element signature="method#isValidPawnMove#0;class#Piece#0" />
-            <element signature="method#isValidBishopMove#0;class#Piece#0" />
-            <element signature="method#isValidKnightMove#0;class#Piece#0" />
-            <element signature="method#isValidStraightMove#0;class#Piece#0" />
-            <element signature="method#isValidRookMove#0;class#Piece#0" />
-            <element signature="method#isValidQueenMove#0;class#Piece#0" />
-            <element signature="method#isValidKingMove#0;class#Piece#0" />
-            <element signature="e#11839#11840#0" expanded="true" />
-            <element signature="e#11922#11923#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="198">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#takePlayerInput#0;class#Board#0" />
-            <element signature="method#testMoves#0;class#Board#0" />
-            <element signature="method#getAllSameColorPieces#0;class#Board#0" />
-            <element signature="method#checkForMate#0;class#Board#0" />
-            <element signature="method#getInterSectionSquares#0;class#Board#0" />
-            <element signature="method#getStraightIntersectionSquares#0;class#Board#0" />
-            <element signature="method#getDiagonalIntersectionSquares#0;class#Board#0" />
-            <element signature="method#getKing#0;class#Board#0" />
-            <element signature="method#changePlayer#0;class#Board#0" />
-            <element signature="method#getOppositeColor#0;class#Board#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Coord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="e#575#576#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
           </folding>
         </state>
       </provider>
