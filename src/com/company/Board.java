@@ -356,7 +356,7 @@ public class Board {
         while (!isMated) {
             printBoard();
             userGivesLegalMove();
-            checkForCheckOrMate();
+            checkForCheckOrMate(currentPlayerColor); //TODO sjekk om det er riktig farge, sjekk om CFCOM har riktig logikk
             changePlayer();
         }
         System.out.println(winner +" har vunnet!!!!");
