@@ -1,5 +1,5 @@
 # Sjakk
-** Hjemmesnekret sjakk for de som liker bugs **
+**Hjemmesnekret sjakk for de som liker bugs**
 
 
 
