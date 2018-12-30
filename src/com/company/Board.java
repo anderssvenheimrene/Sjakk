@@ -9,15 +9,15 @@ public class Board {
     private static PieceColor winner;
     private static PieceColor currentPlayerColor;
 
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_WHITE = "\u001B[30m";
-    public static final String ANSI_BLUE = "\u001B[34m";
-    private static final int DIM = 8;
-    public static Piece[][] board; // don't have to allocate new instance in memory yet, we do it in the constructor.
-    public String[][] boardWithBorders;
+    private static final String ANSI_RESET = "\u001B[0m";
+    private static final String ANSI_WHITE = "\u001B[30m";
+    private static final String ANSI_BLUE = "\u001B[34m";
+    static final int DIM = 8;
+    static Piece[][] board; //static because the board belongs to the class, not the specific instance
+    private static String[][] boardWithBorders;
 
 
-    public Board() { //board constructor. Don't need any inputs here, as we know how a chessboard looks like in the beginning
+    Board() { //board constructor. Don't need any inputs here, as we know how a chessboard looks like in the beginning
         board = new Piece[DIM][DIM]; //create a new instance of the 8x8 Piece array'
         currentPlayerColor = PieceColor.WHITE;
 
@@ -66,15 +66,15 @@ public class Board {
     }
 
     public static Coord takePlayerInput() {
-        boolean validInput = false;
+        boolean isValidInput = false;
         Scanner reader = new Scanner(System.in);  // Reading from System.in
         //take some input, check that it is a coordinate, then return the Coord
-        while (!validInput) {
-            System.out.println("skriv inn koordinat");
+        while (!isValidInput) {
+            System.out.println("Enter coordinate");
             String playerInput = reader.nextLine(); // Scans the next token of the input as an int.
             try {
                 if (playerInput.length() != 2) {
-                    throw new StringIndexOutOfBoundsException("the input is more than a letter and a number");
+                    throw new StringIndexOutOfBoundsException();
                 }
                 int letterInput = Character.getNumericValue(playerInput.charAt(0));
                 int numberInput = Character.getNumericValue(playerInput.charAt(1));
@@ -86,11 +86,11 @@ public class Board {
                 }
                 return new Coord(playerInput);
             } catch (StringIndexOutOfBoundsException e) {
-                System.out.print("Innskrevet koordinat må være en bokstav [A-H] og et tall [1-8]! \n");
+                System.out.print("The coordinate has to be a letter[A-H] and a number[1-8]! \n");
             } catch (SignatureException e) {
-                System.out.print("bokstaven må være mellom A-H \n");
+                System.out.print("The letter has to be between A-H \n");
             } catch (SecurityException e) {
-                System.out.print("tallet må være mellom 1-8 \n");
+                System.out.print("The number has to be between 1-8 \n");
             }
         }
         return new Coord("FOO"); // for some reason there has to be a return here, although this can never be reached
@@ -137,7 +137,7 @@ public class Board {
     }
 
     public PieceType getPieceType(Coord coord) {
-        return board[coord.y][coord.x].pieceType;
+        return board[coord.row][coord.col].pieceType;
     }
 
     public void testMoves() {
@@ -158,17 +158,17 @@ public class Board {
             System.out.println("Destinasjon:");
             Coord destinationCoord = this.takePlayerInput();
 
-            this.board[pieceCoord.y][pieceCoord.x] = new Piece(pieceType, pieceColor, pieceCoord);
+            this.board[pieceCoord.row][pieceCoord.col] = new Piece(pieceType, pieceColor, pieceCoord);
 
             this.printBoard();
-            System.out.println("can the piece move to the desired coordinate? " + this.board[pieceCoord.y][pieceCoord.x].isValidMove(this, destinationCoord));
+            System.out.println("can the piece move to the desired coordinate? " + this.board[pieceCoord.row][pieceCoord.col].isValidMove(this, destinationCoord));
         }
 
 
         //Piece newPiece = new Piece()
     } //function for testing moves
 
-    private Piece getPieceAtSpecifiedCoord(Coord c){ return board[c.x][c.y]; }
+    private Piece getPieceAtSpecifiedCoord(Coord c){ return board[c.row][c.col]; }
 
     private ArrayList<Piece> getAllSameColorPieces(PieceColor pieceColor) {
         ArrayList<Piece> sameColorPieces = new ArrayList();
@@ -182,12 +182,12 @@ public class Board {
         return sameColorPieces;
     }
 
-    private boolean checkForCheckOrMate() {
-        ArrayList<Piece> allEnemyPieces = getAllSameColorPieces(getKing(currentPlayerColor).getOppositeColor());
+    private boolean checkForCheckOrMate(PieceColor kingColor) { //
+        ArrayList<Piece> allEnemyPieces = getAllSameColorPieces(getKing(kingColor).getOppositeColor());
         ArrayList<Piece> allCheckingPieces = new ArrayList<>();
         boolean isChecked = false;
         for(Piece piece : allEnemyPieces){
-            if(piece.isValidMove(this,getKing(currentPlayerColor).pos)){
+            if(piece.isValidMove(this,getKing(kingColor).pos)){
                 isChecked = true;
                 allCheckingPieces.add(piece); //may be up to 2 pieces checking the king
             }
@@ -202,8 +202,8 @@ public class Board {
         Piece king = getKing(currentPlayerColor);
         //iterate around the king and check for valid moves
         isMated = true; // it is check mate unless we disprove it
-        for (int i = Math.max(0, king.pos.x - 1); i < Math.min(7, king.pos.x + 1); i++) {
-            for (int j = Math.max(0, king.pos.y - 1); j < Math.min(7, king.pos.y + 1); j++) {
+        for (int i = Math.max(0, king.pos.col - 1); i < Math.min(7, king.pos.col + 1); i++) {
+            for (int j = Math.max(0, king.pos.row - 1); j < Math.min(7, king.pos.row + 1); j++) {
                 if (king.isValidKingMove(this, new Coord(i, j))) {
                     isMated = false;
                     break;
@@ -238,7 +238,7 @@ public class Board {
                 interSectionSquares = getDiagonalIntersectionSquares(interSectionSquares, attacker, kingPos);
                 break;
             case QUEEN:
-                if (attacker.pos.x == kingPos.x || attacker.pos.y == kingPos.y) //queen is straightlined to king
+                if (attacker.pos.col == kingPos.col || attacker.pos.row == kingPos.row) //queen is straightlined to king
                     interSectionSquares = getStraightIntersectionSquares(interSectionSquares, attacker, kingPos);
                 else
                     interSectionSquares = getDiagonalIntersectionSquares(interSectionSquares, attacker, kingPos);
@@ -250,15 +250,15 @@ public class Board {
     }
 
     public ArrayList<Coord> getStraightIntersectionSquares(ArrayList<Coord> interSectionSquares, Piece attacker, Coord kingPos) {
-        int deltaX = Math.abs(attacker.pos.x - kingPos.x);
-        int deltaY = Math.abs(attacker.pos.y - kingPos.y);
+        int deltaX = Math.abs(attacker.pos.col - kingPos.col);
+        int deltaY = Math.abs(attacker.pos.row - kingPos.row);
         if (deltaX == 0) {
-            for (int j = Math.min(attacker.pos.y, kingPos.y) + 1; j < deltaY; j++) { //for each position in the path
-                interSectionSquares.add(new Coord(kingPos.x, j));
+            for (int j = Math.min(attacker.pos.row, kingPos.row) + 1; j < deltaY; j++) { //for each position in the path
+                interSectionSquares.add(new Coord(kingPos.col, j));
             }
         } else if (deltaY == 0) {
-            for (int i = Math.min(attacker.pos.x, kingPos.x) + 1; i < deltaX; i++) { //for each position in the path
-                interSectionSquares.add(new Coord(i, kingPos.y));
+            for (int i = Math.min(attacker.pos.col, kingPos.col) + 1; i < deltaX; i++) { //for each position in the path
+                interSectionSquares.add(new Coord(i, kingPos.row));
             }
         } else {
             System.out.println("something is awfully wrong in canBlockCheck");
@@ -269,20 +269,20 @@ public class Board {
     public ArrayList<Coord> getDiagonalIntersectionSquares(ArrayList<Coord> interSectionSquares, Piece attacker, Coord kingPos) {
 
         ArrayList<Coord> intersectionSquares = new ArrayList<>();
-        int minX = Math.min(attacker.pos.x, kingPos.x);
-        int maxX = Math.max(attacker.pos.x, kingPos.x);
-        int minY = Math.min(attacker.pos.y, kingPos.y);
-        int maxY = Math.max(attacker.pos.y, kingPos.y);
+        int minX = Math.min(attacker.pos.col, kingPos.col);
+        int maxX = Math.max(attacker.pos.col, kingPos.col);
+        int minY = Math.min(attacker.pos.row, kingPos.row);
+        int maxY = Math.max(attacker.pos.row, kingPos.row);
         int j;
-        if ((attacker.pos.x > kingPos.x && attacker.pos.y > kingPos.y) || (attacker.pos.x < kingPos.x && attacker.pos.y < kingPos.y)) {
-            //increasing x, increasing y
+        if ((attacker.pos.col > kingPos.col && attacker.pos.row > kingPos.row) || (attacker.pos.col < kingPos.col && attacker.pos.row < kingPos.row)) {
+            //increasing col, increasing row
             j = minY + 1;
             for (int i = minX + 1; i < maxX; i++) {
                 interSectionSquares.add(new Coord(i, j));
                 j++;
             }
         } else {
-            //increasing x, decreasing y
+            //increasing col, decreasing row
             j = maxY - 1;
             for (int i = minX + 1; i < maxX; i++) {
                 interSectionSquares.add(new Coord(i, j));
@@ -299,14 +299,13 @@ public class Board {
         Piece tempPiece = getPieceAtSpecifiedCoord(destinationCoord); //store the piece that is taken
         Coord sourceCoord = pieceToMove.pos;  //store the source coordinate
         pieceToMove.move(this,destinationCoord); //move the piece to the destination (updates its coord)
-        board[sourceCoord.x][sourceCoord.y] = new Piece(sourceCoord.x,sourceCoord.y); //place empty space on board
 
-        if(checkForCheckOrMate()) { moveLeadsToCheck = true; }
+        if(checkForCheckOrMate(getKing(currentPlayerColor).getOppositeColor())) { moveLeadsToCheck = true; } //
         //the move we are trying to make leads to us checking ourselves. this is not allowed so we revert it
 
         tempPiece.move(this,destinationCoord); //move pieces back to original position
         pieceToMove.move(this,sourceCoord);
-
+        System.out.println("moveLeadsToCheck" + moveLeadsToCheck);
         return moveLeadsToCheck;
     }
 
@@ -314,12 +313,16 @@ public class Board {
         Piece pieceToMove;
         Coord pieceToMoveCoord, destinationCoord;
         do{
+            System.out.println(currentPlayerColor + ", Choose Piece:");
             pieceToMoveCoord = takePlayerInput();
             pieceToMove = getPieceAtSpecifiedCoord(pieceToMoveCoord);
+            System.out.println("Choose destination:");
             destinationCoord = takePlayerInput();
         }
-        while(pieceToMove.pieceColor != currentPlayerColor && !pieceToMove.isValidMove(this,destinationCoord) &&
-                !chosenMoveLeadsToCheck(pieceToMove,destinationCoord,getKing(currentPlayerColor)));
+        while(pieceToMove.pieceColor != currentPlayerColor || !pieceToMove.isValidMove(this,destinationCoord) ||
+                !chosenMoveLeadsToCheck(pieceToMove,destinationCoord,getKing(currentPlayerColor))); //keep taking input until we have a valid piece moving to a valid square
+        pieceToMove.move(this,destinationCoord);
+
     }
 
     private Piece getKing(PieceColor kingColor){
