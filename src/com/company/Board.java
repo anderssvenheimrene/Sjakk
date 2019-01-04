@@ -12,7 +12,7 @@ public class Board {
     private static final String ANSI_RESET = "\u001B[0m";
     private static final String ANSI_WHITE = "\u001B[30m";
     private static final String ANSI_BLUE = "\u001B[34m";
-    static final int DIM = 8;
+    public static final int DIM = 8;
     static Piece[][] board; //static because the board belongs to the class, not the specific instance
     private static String[][] boardWithBorders;
 
